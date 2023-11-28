@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Figurinhas | Izabela e Rafael</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: black;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.3rem;
+            padding-top: 3%;
+            font-size: 0.9rem;
+        }
+
+        .form input {
+            width: 20rem;
+            background-color: rgb(233, 233, 233);
+        }
+
+        .form input,
+        .button {
+            border: none;
+            border-radius: 8px;
+            padding: 0.3rem 0.5rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: black;
+        }
+
+        .button {
+            background-color: rgb(199, 199, 199);
+            cursor: pointer;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Projeto realizado por:
+        Izabela Tayná Reis Coimbra
+        Rafael De Sousa Antoniete
+    -->
+    <h1>Gerador de Figurinhas</h1>
+    <form method="post" action="/figurinha">
+        <div class="form">
+            <label>Título:</label>
+            <input type="text" name="titulo"><br>
+
+            <label>Nome do arquivo:</label>
+            <input type="text" name="nomeArquivo"><br>
+
+            <label>URL da imagem:</label>
+            <input type="url" name="urlImagem"><br>
+        </div>
+        <input type="submit" name="geradora" value="Gerar figurinha" class="button"><br>
+    </form>
+    <br>
+</body>
+
+</html>
